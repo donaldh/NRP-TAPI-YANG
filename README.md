@@ -8,7 +8,7 @@ This project uses symlinks to both the ONF Eagle xmi2yang tool and the MEF NRP_I
 
 Check out the three projects in the same directory:
 
-```
+```sh
 % git checkout git@github.com:donaldh/EAGLE-Open-Model-Profile-and-Tools.git
 ...
 % git checkout git@github.com:MEF-GIT/MEF-Common-Model.git
@@ -23,7 +23,7 @@ NRP-TAPI-YANG/
 
 Ensure that you have the correct branches checked out:
 
-```
+```sh
 % cd EAGLE-Open-Model-Profile-and-Tools
 # git checkout UmlYangTools
 % git checkout rfc6087-naming # until PR gets merged
@@ -36,7 +36,7 @@ Ensure that you have the correct branches checked out:
 
 Build the YANG modules:
 
-```
+```sh
 % cd NRP-TAPI-YANG
 % make
 node ../EAGLE-Open-Model-Profile-and-Tools/xmi2yang\ tool-v2.0/main.js
@@ -53,14 +53,14 @@ write tapi-topology.yang successfully!
 
 Validate the YANG modules with pyang:
 
-```
+```sh
 % make validate
 pyang -p project project/*.yang
 ```
 
 Display a YANG tree view of the generated YANG modules:
 
-```
+```sh
 % make tree
 pyang -f tree -p project project/*.yang
 module: nrp-interface
