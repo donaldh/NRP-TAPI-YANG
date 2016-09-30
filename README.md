@@ -9,7 +9,8 @@ This project uses symlinks to both the ONF Eagle xmi2yang tool and the MEF NRP_I
 Check out the three projects in the same directory:
 
 ```sh
-% git checkout git@github.com:donaldh/EAGLE-Open-Model-Profile-and-Tools.git
+# git checkout git@github.com:OpenNetworkingFoundation/EAGLE-Open-Model-Profile-and-Tools.git
+% git checkout git@github.com:donaldh/EAGLE-Open-Model-Profile-and-Tools.git # until PR gets merged
 ...
 % git checkout git@github.com:MEF-GIT/MEF-Common-Model.git
 ...
