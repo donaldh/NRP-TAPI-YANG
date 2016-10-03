@@ -13,6 +13,34 @@ IETF topology only has unidirectional links.
 | topology/link/link-port             | network/link/source            |
 | - and                               | network/link/destination       |
 
+The majority of the remainder of TAPI Topology can be implemented using augmentation of node, termination-point and link.
+
+### TAPI Topology Node
+
+Augment IETF Network Node
+
+* state
+* transfer-capacity
+* transfer-cost
+* transfer-integrity
+* transfer-timing
+* layer-protocol-name
+
+### TAPI Topology Link
+
+Augment IETF Network Topology Link
+
+* state
+* transfer-capacity
+* transfer-cost
+* transfer-integrity
+* transfer-timing
+* risk-parameter
+* validation
+* lp-transition
+* layer-protocol-name
+* direction - how should we handle bi-directional links?
+
 ## References
 
 https://github.com/OpenNetworkingFoundation/Snowmass-ONFOpenTransport/blob/develop/YANG/TapiTopology.yang
