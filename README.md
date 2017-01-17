@@ -16,10 +16,13 @@ Check out the three projects in the same directory:
 ...
 % git checkout git@github.com:donaldh/NRP-TAPI-YANG.git
 ...
+% git checkout git@github.com:OpenNetworkingFoundation/Snowmass-ONFOpenTransport.git
+...
 % ls -1
 EAGLE-Open-Model-Profile-and-Tools/
 MEF-Common-Model/
 NRP-TAPI-YANG/
+Snowmass-ONFOpenTransport/
 ```
 
 Ensure that you have the correct branches checked out:
@@ -39,7 +42,7 @@ Build the YANG modules:
 
 ```sh
 % cd NRP-TAPI-YANG
-% make
+% make yang
 node ../EAGLE-Open-Model-Profile-and-Tools/xmi2yang\ tool-v2.0/main.js
 NRP_Interface.uml read success!
 Tapi.uml read success!
@@ -56,14 +59,14 @@ Validate the YANG modules with pyang:
 
 ```sh
 % make validate
-pyang -p project project/*.yang
+pyang -p yang yang/*.yang
 ```
 
 Display a YANG tree view of the generated YANG modules:
 
 ```sh
 % make tree
-pyang -f tree -p project project/*.yang
+pyang -f tree -p yang yang/*.yang
 module: nrp-interface
    +--rw uni
    +--rw evc-per-uni
