@@ -1,5 +1,5 @@
 
-XMI2YANG=../EAGLE-Open-Model-Profile-and-Tools/xmi2yang\ tool-v2.0/main.js
+XMI2YANG=../EAGLE-Open-Model-Profile-and-Tools/UmlYangTools/xmi2yang/main.js
 PANDOC=pandoc -t html5 -f markdown_github-hard_line_breaks -c github-pandoc.css
 HTML=$(patsubst %.md, html/%.html, $(wildcard *.md))
 
