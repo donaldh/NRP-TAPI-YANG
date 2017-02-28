@@ -1,7 +1,8 @@
-
+VALIDATOR_JAR=~/.m2/repository/donaldh/yang-validator/1.0/yang-validator-1.0-executable.jar
 XMI2YANG=../EAGLE-Open-Model-Profile-and-Tools/UmlYangTools/xmi2yang/main.js
 PANDOC=pandoc -t html5 -f markdown_github-hard_line_breaks -c github-pandoc.css
 HTML=$(patsubst %.md, html/%.html, $(wildcard *.md))
+SAMPLES=$(wildcard samples/*.xml)
 
 yang::	## Run xmi2yang to generate YANG files
 	node $(XMI2YANG)
@@ -9,11 +10,16 @@ yang::	## Run xmi2yang to generate YANG files
 devtool:	## Run xmi2yang in chrome devtool for debugging
 	devtool $(XMI2YANG) &
 
-validate:	## Run pyang validation
+pyang:	## Run pyang validation
 	pyang -p yang yang/*.yang
 
 tree:	## Generate pyang tree view
 	pyang -f tree -p yang yang/*.yang
+
+test:	$(SAMPLES) ## Validate JSON instance docs against YANG schema
+
+samples/*.xml::
+	java -jar $(VALIDATOR_JAR) yang $@
 
 html:	$(HTML)
 

@@ -1,0 +1,10 @@
+<create-connectivity-service xmlns="urn:mef:xml:ns:yang:TapiConnectivity">
+  <input>
+    <service-port>
+      <service-end-point>bogus-uuid</service-end-point>
+    </service-port>
+    <nrp-cg-eth-conn-serv-spec xmlns="urn:mef:xml:ns:yang:NRP_Interface">
+      <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+    </nrp-cg-eth-conn-serv-spec>
+  </input>
+</create-connectivity-service>
