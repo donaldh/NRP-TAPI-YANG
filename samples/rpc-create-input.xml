@@ -3,7 +3,14 @@
     <service-port>
       <service-end-point>bogus-uuid</service-end-point>
     </service-port>
+    <service-port>
+      <service-end-point>bogus-uuid-2</service-end-point>
+    </service-port>
+    <conn-constraint>
+      <service-level>best-effort</service-level>
+    </conn-constraint>
     <nrp-cg-eth-conn-serv-spec xmlns="urn:mef:xml:ns:yang:NRP_Interface">
+      <unicast-frame-delivery></unicast-frame-delivery>
       <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
     </nrp-cg-eth-conn-serv-spec>
   </input>
