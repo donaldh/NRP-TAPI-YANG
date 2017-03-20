@@ -1,17 +1,32 @@
-<create-connectivity-service xmlns="urn:mef:xml:ns:yang:TapiConnectivity">
+<create-connectivity-service xmlns="urn:mef:yang:TapiConnectivity">
   <input>
-    <service-port>
-      <service-end-point>bogus-uuid</service-end-point>
-    </service-port>
-    <service-port>
-      <service-end-point>bogus-uuid-2</service-end-point>
-    </service-port>
+    <service-end-point>
+      <service-interface-point>endpoint:a:uuid</service-interface-point>
+      <direction>bidirectional</direction>
+      <layer-protocol-name>eth</layer-protocol-name>
+    </service-end-point>
+    <service-end-point>
+      <service-interface-point>endpoint:z:uuid</service-interface-point>
+      <direction>bidirectional</direction>
+      <layer-protocol-name>eth</layer-protocol-name>
+    </service-end-point>
     <conn-constraint>
+      <service-type>point-to-point-connectivity</service-type>
       <service-level>best-effort</service-level>
     </conn-constraint>
-    <nrp-cg-eth-conn-serv-spec xmlns="urn:mef:xml:ns:yang:NRP_Interface">
-      <unicast-frame-delivery></unicast-frame-delivery>
+    <nrp-cg-eth-conn-serv-spec xmlns="urn:mef:yang:NRP_Interface">
+      <connection-type>point-to-point</connection-type>
+      <max-frame-size>2000</max-frame-size>
+      <unicast-frame-delivery>unconditionally</unicast-frame-delivery>
+      <broadcast-frame-delivery>unconditionally</broadcast-frame-delivery>
+      <multicast-frame-delivery>unconditionally</multicast-frame-delivery>
+      <ce-vlan-id-preservation>preserve</ce-vlan-id-preservation>
       <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+      <ce-vlan-dei-preservation>true</ce-vlan-dei-preservation>
+      <s-vlan-pcp-preservation>true</s-vlan-pcp-preservation>
+      <s-vlan-dei-preservation>true</s-vlan-dei-preservation>
+      <available-meg-level>0</available-meg-level>
+      <l2cp-address-set>ctb</l2cp-address-set>
     </nrp-cg-eth-conn-serv-spec>
   </input>
 </create-connectivity-service>

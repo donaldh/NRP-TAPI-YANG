@@ -1,13 +1,13 @@
-<context xmlns="urn:mef:xml:ns:yang:TapiCommon"
-         xmlns:nrp-interface="urn:mef:xml:ns:yang:NRP_Interface">
-  <service-end-point>
-    <uuid>bogus-uuid</uuid>
+<context xmlns="urn:mef:yang:TapiCommon"
+         xmlns:nrp="urn:mef:yang:NRP_Interface">
+  <service-interface-point>
+    <uuid>endpoint:uuid</uuid>
     <layer-protocol>
       <local-id>bogus-id</local-id>
-      <nrp-interface:nrp-cg-eth-uni-spec>
-        <nrp-interface:max-frame-size>2000</nrp-interface:max-frame-size>
-        <nrp-interface:elmi-enabled>true</nrp-interface:elmi-enabled>
-      </nrp-interface:nrp-cg-eth-uni-spec>
+      <nrp:nrp-cg-eth-uni-spec>
+        <nrp:max-frame-size>2000</nrp:max-frame-size>
+        <nrp:elmi-enabled>true</nrp:elmi-enabled>
+      </nrp:nrp-cg-eth-uni-spec>
     </layer-protocol>
-  </service-end-point>
+  </service-interface-point>
 </context>
