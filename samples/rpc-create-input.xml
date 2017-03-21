@@ -1,15 +1,22 @@
 <create-connectivity-service xmlns="urn:mef:yang:TapiConnectivity">
   <input>
-    <service-end-point>
+    <end-point>
       <service-interface-point>endpoint:a:uuid</service-interface-point>
       <direction>bidirectional</direction>
       <layer-protocol-name>eth</layer-protocol-name>
-    </service-end-point>
-    <service-end-point>
+      <nrp-cg-eth-frame-flow-cpa-aspec xmlns="urn:mef:yang:NRP_Interface">
+        <ce-vlan-id-list>
+          <type>all</type>
+        </ce-vlan-id-list>
+      </nrp-cg-eth-frame-flow-cpa-aspec>
+    </end-point>
+    <end-point>
       <service-interface-point>endpoint:z:uuid</service-interface-point>
       <direction>bidirectional</direction>
       <layer-protocol-name>eth</layer-protocol-name>
-    </service-end-point>
+      <nrp-cg-eth-frame-flow-cpa-aspec xmlns="urn:mef:yang:NRP_Interface">
+      </nrp-cg-eth-frame-flow-cpa-aspec>
+    </end-point>
     <conn-constraint>
       <service-type>point-to-point-connectivity</service-type>
       <service-level>best-effort</service-level>
