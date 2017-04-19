@@ -9,6 +9,14 @@
           <type>all</type>
         </ce-vlan-id-list>
       </nrp-cg-eth-frame-flow-cpa-aspec>
+      <nrp-cg-eth-uni-spec xmlns="urn:mef:yang:NRP_Interface">
+        <ingress-cg-eth-bwpflow>
+          <uuid>bwp:uuid</uuid>
+        </ingress-cg-eth-bwpflow>
+        <egress-cg-eth-bwpflow>
+          <uuid>bwp:uuid</uuid>
+        </egress-cg-eth-bwpflow>
+      </nrp-cg-eth-uni-spec>
     </end-point>
     <end-point>
       <service-interface-point>endpoint:z:uuid</service-interface-point>
@@ -16,6 +24,8 @@
       <layer-protocol-name>eth</layer-protocol-name>
       <nrp-cg-eth-frame-flow-cpa-aspec xmlns="urn:mef:yang:NRP_Interface">
       </nrp-cg-eth-frame-flow-cpa-aspec>
+      <nrp-cg-eth-enni-spec xmlns="urn:mef:yang:NRP_Interface">
+      </nrp-cg-eth-enni-spec>
     </end-point>
     <conn-constraint>
       <service-type>point-to-point-connectivity</service-type>
