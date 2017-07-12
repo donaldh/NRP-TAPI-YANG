@@ -6,6 +6,10 @@ SAMPLES=$(wildcard samples/*.xml)
 
 yang::	## Run xmi2yang to generate YANG files
 	node $(XMI2YANG)
+	perl -pi -e 's/mef-types/mef-common-types/' project/*.yang
+	perl -pi -e 's/min-elements 2;//' project/tapi-common.yang
+	perl -pi -e 's/"UNLOCKED"/"unlocked"/' project/mef-common.yang
+	perl -pi -e 's/^}/    typedef real { type decimal64 { fraction-digits 2; } }\n}/' project/mef-common.yang
 
 devtool:	## Run xmi2yang in chrome devtool for debugging
 	devtool $(XMI2YANG) &

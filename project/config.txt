@@ -3,6 +3,7 @@ Notice: this config file will be read to JSON. If you want to write some special
 If there are errors in reading config file, please report an issue on git.
 
 {"namespace":"urn:mef:yang:",
+"prefix":"mef",
 "organization":"Metro Ethernet Forum (MEF)",
 "contact":"MEF",
-"revision":{"date":"2017-02-27", "description":"MEF NRP 1.0.alpha", "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020 and RFC 6087"}}
+"revision":{"date":"2017-07-12", "description":"MEF NRP 1.0.cfc4", "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020 and RFC 6087"}}
