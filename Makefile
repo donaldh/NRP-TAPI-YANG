@@ -10,6 +10,10 @@ yang::	## Run xmi2yang to generate YANG files
 	perl -pi -e 's/l-2cp/l2cp/' project/mef-*.yang project/nrm-connectivity.yang
 	perl -pi -e 's/mef-types/mef-common-types/g' project/*.yang
 	perl -pi -e 's/nresource/n-resource/' project/nr*.yang
+	perl -pi -e 's/(uses|grouping) context/$$1 context-attrs/' project/tapi-common.yang
+	perl -pi -e 's/min-elements 2;//' project/tapi-common.yang
+	perl -pi -e 's/LayerProtocolName/layer-protocol-name/' project/tapi-common.yang
+	perl -pi -e 's/CapacityUnit/capacity-unit/' project/tapi-common.yang
 	mv project/mef-types.yang project/mef-common-types.yang
 
 devtool:	## Run xmi2yang in chrome devtool for debugging
