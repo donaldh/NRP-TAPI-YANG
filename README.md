@@ -2,9 +2,14 @@
 
 This is a utility project for running the ONF Eagle xmi2yang tool against the MEF-NRP extensions for the T-API model.
 
+# Prerequisites
+
+You'll need nodejs installed to be able to run the xmi2yang tool. If you want to validate the
+output then you'll also need to install pyang.
+
 # Set Up
 
-This project uses symlinks to both the ONF Eagle xmi2yang tool and the MEF NRP_Interface model.
+This project uses symlinks to both the ONF Eagle xmi2yang tool and the MEF/TAPI models.
 
 Check out the three projects in the same directory:
 
@@ -16,27 +21,38 @@ Check out the three projects in the same directory:
 ...
 % git checkout git@github.com:donaldh/NRP-TAPI-YANG.git
 ...
-% git checkout git@github.com:OpenNetworkingFoundation/Snowmass-ONFOpenTransport.git
-...
 % ls -1
 EAGLE-Open-Model-Profile-and-Tools/
 MEF-Common-Model/
 NRP-TAPI-YANG/
-Snowmass-ONFOpenTransport/
 ```
 
 Ensure that you have the correct branches checked out:
 
 ```sh
 % cd EAGLE-Open-Model-Profile-and-Tools
-# git checkout UmlYangTools
-% git checkout rfc6087-naming # until PR gets merged
+% git checkout refactor_umlyangtools
 % cd ../MEF-Common-Model
 % git checkout CIM_Develop
 % cd ..
 ```
 
 # Usage
+
+Everything in hte NRP-TAPI-YANG project is automated using Make:
+
+```sh
+% make
+yang                 Run xmi2yang to generate YANG files
+devtool              Run xmi2yang in chrome devtool for debugging
+pyang                Run pyang validation
+tree                 Generate pyang tree view
+test                 Validate JSON instance docs against YANG schema
+clean                Clean up
+help                 This help
+```
+
+# How to Build the YANG
 
 Build the YANG modules:
 
