@@ -7,6 +7,26 @@ This is a utility project for running the ONF Eagle xmi2yang tool against the ME
 You'll need nodejs installed to be able to run the xmi2yang tool. If you want to validate the
 output then you'll also need to install pyang.
 
+## nodejs
+
+If you are using macOS and have homebrew installed then installing nodejs is as simple as:
+
+```sh
+brew install nodejs
+```
+Alternatively, you can download it from https://nodejs.org/en/download/
+
+## pyang
+
+pyang is a python script that can be installed from PyPy using pip
+
+```sh
+pip install pyang
+```
+
+Note that you will need pip installed first. On macOS you may want to start by installing Python
+virtualenv and then setting up a virtualenv for pyang.
+
 # Set Up
 
 This project uses symlinks to both the ONF Eagle xmi2yang tool and the MEF/TAPI models.
