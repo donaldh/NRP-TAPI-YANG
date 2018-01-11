@@ -27,13 +27,15 @@ MEF-Common-Model/
 NRP-TAPI-YANG/
 ```
 
-Ensure that you have the correct branches checked out:
+Ensure that you have the correct git branches checked out:
 
 ```sh
 % cd EAGLE-Open-Model-Profile-and-Tools
 % git checkout refactor_umlyangtools
 % cd ../MEF-Common-Model
 % git checkout CIM_Develop
+% cd ../NRP-TAPI-YANG
+% git checkout refactor
 % cd ..
 ```
 
