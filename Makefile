@@ -16,8 +16,8 @@ yang::	## Run xmi2yang to generate YANG files
 	perl -pi -e 's/CapacityUnit/capacity-unit/' project/tapi-common.yang
 	mv project/mef-types.yang project/mef-common-types.yang
 
-devtool:	## Run xmi2yang in chrome devtool for debugging
-	node-inspect $(XMI2YANG) &
+debug:	## Run xmi2yang in node for debugging
+	node --inspect-brk $(XMI2YANG) &
 
 pyang:	## Run pyang validation
 	pyang -p yang yang/*.yang
