@@ -1,5 +1,5 @@
 VALIDATOR_JAR=~/.m2/repository/donaldh/yang-validator/1.0/yang-validator-1.0-executable.jar
-XMI2YANG=../EAGLE-Open-Model-Profile-and-Tools/UmlYangTools/xmi2yang/app.js
+XMI2YANG=../xmi2yang/app.js
 PANDOC=pandoc -t html5 -f markdown_github-hard_line_breaks -c github-pandoc.css
 HTML=$(patsubst %.md, html/%.html, $(wildcard *.md))
 SAMPLES=$(wildcard samples/*.xml)

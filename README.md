@@ -64,6 +64,7 @@ Ensure that you have the correct git branches checked out:
 Everything in hte NRP-TAPI-YANG project is automated using Make:
 
 ```sh
+% cd NRP-TAPI-YANG/presto-nrp
 % make
 yang                 Run xmi2yang to generate YANG files
 devtool              Run xmi2yang in chrome devtool for debugging
@@ -79,7 +80,7 @@ help                 This help
 Build the YANG modules:
 
 ```sh
-% cd NRP-TAPI-YANG
+% cd NRP-TAPI-YANG/presto-nrp
 % make yang
 node ../EAGLE-Open-Model-Profile-and-Tools/xmi2yang\ tool-v2.0/main.js
 NRP_Interface.uml read success!
@@ -96,7 +97,7 @@ write tapi-topology.yang successfully!
 Validate the YANG modules with pyang:
 
 ```sh
-% make validate
+% make pyang
 pyang -p yang yang/*.yang
 ```
 
