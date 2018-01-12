@@ -1,0 +1,16 @@
+{
+    "sonata" : {
+        "namespace":"urn:mef:yang:",
+        "organization":"Metro Ethernet Forum (MEF)",
+        "contact":"MEF",
+        "revision": {
+            "date":"2018-01-11",
+            "description":"MEF SONATA Ordering",
+            "reference":""
+        },
+        "prefix": {
+            "sonata-order-interface": "order"
+        },
+        "suppressIfFeatureGen":true
+    }
+}
